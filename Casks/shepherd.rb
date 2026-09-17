@@ -9,8 +9,8 @@
 # checksum from the *published* DMG, never from a local build: re-running the
 # release workflow for a tag replaces the assets.
 cask "shepherd" do
-  version "1.0.1"
-  sha256 "e01ad12c27755e7be709a92a66e93811d35d205523bb18d528f027d350cf2509"
+  version "1.1.0"
+  sha256 "0c69e4925dc82ce1f67b1e730400b00dc46f928bda4b4de7719539f1a907a54f"
 
   url "https://github.com/schnaq/shepherd/releases/download/v#{version}/Shepherd-#{version}.dmg",
       verified: "github.com/schnaq/shepherd/"
