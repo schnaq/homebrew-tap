@@ -9,8 +9,8 @@
 # checksum from the *published* DMG, never from a local build: re-running the
 # release workflow for a tag replaces the assets.
 cask "shepherd" do
-  version "1.3.0"
-  sha256 "3bd3defcbbc6aa6362426b60ab58b45e2eaaa6f2f1497814c8072273ea8085a7"
+  version "1.4.0"
+  sha256 "c74314697bd7c84c37d2cb2909e7a559482a47e81e7079eac2b0c17e17592292"
 
   url "https://github.com/schnaq/shepherd/releases/download/v#{version}/Shepherd-#{version}.dmg",
       verified: "github.com/schnaq/shepherd/"
@@ -26,9 +26,9 @@ cask "shepherd" do
   # Sparkle keeps the installed copy current, so Homebrew should not fight it: `brew upgrade`
   # leaves an app with `auto_updates true` alone unless the cask's version moved.
   auto_updates true
-  # ADR 0002: macOS 26 (Tahoe) and Apple Silicon only. `brew audit --cask` is the arbiter of the
+  # ADR 0038: macOS 27 (Golden Gate) and Apple Silicon only. `brew audit --cask` is the arbiter of the
   # symbol name if a future Homebrew renames it.
-  depends_on macos: :tahoe
+  depends_on macos: :golden_gate
   depends_on arch: :arm64
 
   app "Shepherd.app"
