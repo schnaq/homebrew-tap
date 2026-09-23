@@ -9,8 +9,8 @@
 # checksum from the *published* DMG, never from a local build: re-running the
 # release workflow for a tag replaces the assets.
 cask "shepherd" do
-  version "1.4.0"
-  sha256 "c74314697bd7c84c37d2cb2909e7a559482a47e81e7079eac2b0c17e17592292"
+  version "1.5.0"
+  sha256 "74e6a3f40aa6e8a0ecad4d75c9acd3da19ec3abb4bad585e77051592cad08124"
 
   url "https://github.com/schnaq/shepherd/releases/download/v#{version}/Shepherd-#{version}.dmg",
       verified: "github.com/schnaq/shepherd/"
@@ -28,8 +28,8 @@ cask "shepherd" do
   auto_updates true
   # ADR 0038: macOS 27 (Golden Gate) and Apple Silicon only. `brew audit --cask` is the arbiter of the
   # symbol name if a future Homebrew renames it.
-  depends_on macos: :golden_gate
   depends_on arch: :arm64
+  depends_on macos: :golden_gate
 
   app "Shepherd.app"
 
