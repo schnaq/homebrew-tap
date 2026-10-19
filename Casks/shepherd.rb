@@ -12,8 +12,7 @@ cask "shepherd" do
   version "1.12.0"
   sha256 "d1c6bbae4ac9f418dca51c0d7f14adaa0d506fabe947fcebe9e624573e8e1893"
 
-  url "https://github.com/schnaq/shepherd/releases/download/v#{version}/Shepherd-#{version}.dmg",
-      verified: "github.com/schnaq/shepherd/"
+  url "https://github.com/schnaq/shepherd/releases/download/v#{version}/Shepherd-#{version}.dmg"
   name "Shepherd"
   desc "Review inbox for pull requests from coding agents"
   homepage "https://github.com/schnaq/shepherd"
